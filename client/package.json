@@ -1,0 +1,54 @@
+{
+  "name": "aws-warlord-series1-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "cra-template": "1.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.29.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "tj": "jest",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve-build": "serve -s build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "autoprefixer": "^10.4.20",
+    "install": "^0.13.0",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
+    "jest-transform-stub": "^2.0.0",
+    "npm": "^11.1.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "web-vitals": "^4.2.4"
+  }
+}
