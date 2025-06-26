@@ -1,0 +1,4 @@
+bucket = "tfbackend20250626224914134200000001"
+dynamodb_table = "state_lock_table"
+region = "us-east-1"
+encrypt = true
