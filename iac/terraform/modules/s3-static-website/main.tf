@@ -2,6 +2,7 @@ variable projectName{
     description = "the name of the project or cluster"
 }
 
+
 resource "aws_s3_bucket" react_bucket{
     bucket_prefix=  var.projectName
     force_destroy = true
@@ -31,9 +32,25 @@ resource "aws_s3_bucket_website_configuration" react_site_config{
 output "s3_website_endpoint"{
     value = aws_s3_bucket_website_configuration.react_site_config.website_endpoint
 }
+output "bucket_regional_domain_name"{
+  value = aws_s3_bucket.react_bucket.bucket_regional_domain_name
+}
+output "react_bucket_id"{
+  value =  aws_s3_bucket.react_bucket.id
+}
+output "react_bucket_arn"{
+  value = aws_s3_bucket.react_bucket.arn
+}
+output "s3jsondocument"{
+  value = data.aws_iam_policy_document.react_bucket_public_policy_document.json
+}
 
 data "aws_iam_policy_document" react_bucket_public_policy_document{
-    statement{
+  source_policy_documents = [data.aws_iam_policy_document.static-hosting-access-document.json]
+}
+
+data "aws_iam_policy_document" "static-hosting-access-document"{
+      statement{
         actions = ["s3:GetObject"]
         effect = "Allow"
         resources = [aws_s3_bucket.react_bucket.arn,  "${aws_s3_bucket.react_bucket.arn}/*",]
@@ -70,7 +87,10 @@ resource "aws_s3_object" "object" {
 
   # Unless the bucket has encryption enabled, the ETag of each object is an
   # MD5 hash of that object.
+
   etag = each.value.digests.md5
+
+
 }
 
 
