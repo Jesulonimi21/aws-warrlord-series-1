@@ -14,12 +14,66 @@ module s3-static-website{
   projectName = "frontend-server"
 }
 
+# the alternate domain name should be received as a prefix from a var and then concatenated with the primary domain name
+locals {
+  alternate_domain_name ="react.aroluwa.com"
+  primary_domain_name= "aroluwa.com"
+}
+
+
 
 module s3-tf-backend{
   source = "./modules/s3-tf-backend-config"
   storage-bucket-prefix = "tfbackend"
+}
+
+module "acm" {
+  source = "./modules/acm"
+  alternate_domain_name = local.alternate_domain_name
   
 }
+
+module "cloufront-s3-distribution" {
+  source = "./modules/cloudfront-s3-distribution"
+  s3_json_document = module.s3-static-website.s3jsondocument
+  s3_bucket_arn = module.s3-static-website.react_bucket_arn
+  s3_bucket_id = module.s3-static-website.react_bucket_id
+  s3_domain_name = module.s3-static-website.bucket_regional_domain_name
+  alternate_domain_name = local.alternate_domain_name
+  acm_certificate_arn=module.acm.certificate_arn
+}
+
+module route53-zone {
+  source = "./modules/route53"
+  primary_domain_name = local.primary_domain_name
+  acm_certificate_validation_options = module.acm.domain_validation_options
+  other_records = [
+    {
+      name            = local.alternate_domain_name
+      record  = module.cloufront-s3-distribution.cloudfront-distribution-url
+      type   = "CNAME"
+    }
+  ]
+}
+
+
+# i can create my own script or data source to only create this if it does not yet exist
+# resource "aws_route53_zone" "domain_name" {
+#   name = local.primary_domain_name
+#     lifecycle {
+#     prevent_destroy = true
+#   }
+# }
+
+
+
+
+
+
+
+
+
+
 
 
 output "s3-website-url" {
@@ -29,99 +83,16 @@ output s3-backend-config-bucket-name{
   value = module.s3-tf-backend.s3-backend-tf-config-name
 }
 
-
-//todo: move cloudfront to its own module
-
 output cloudfront-distribution-url{
-  value = aws_cloudfront_distribution.react_website_distribution.domain_name
+  value = module.cloufront-s3-distribution.cloudfront-distribution-url
 }
-
- 
-
-//allow private s3 bucket access to cloudfront during creation, what it takes to configure WAD
-//.cloudfront.net. makesure to template this
-// set the default root object
-//might need to set the behavior
-//sign request value of always
-//When you use CloudFront OAC with Amazon S3 bucket origins, you must set Amazon S3 Object Ownership to Bucket
-//configure a path of / for any error 403 and 404
-
-
-resource "aws_cloudfront_origin_access_control" "react_bucket_acesss_control" {
-  name                              = "react-bucket-cloudfront-access"
-  origin_access_control_origin_type = "s3"
-  signing_behavior                  = "always"
-  signing_protocol                  = "sigv4"
+output route53-zone-id{
+  value = module.route53-zone.route53-zone-id
 }
+// create the route 53 hosted zone first
+// i want to create the certificate for acm next
+// Create the records for the certificate validation in route53 records
+// wait for step 3 until it is successful, then continue with the rest
 
-
-locals {
-  s3_origin_id = "react_bucket"
-}
-
-
-//read on ordered_cache_behavior 
-//read on caching in cloudfrontin general, ordered cache,...
-
-resource "aws_cloudfront_distribution" "react_website_distribution" {
-     enabled             = true
-    default_root_object = "index.html"
-     price_class = "PriceClass_100"
-  origin{
-    domain_name = module.s3-static-website.bucket_regional_domain_name
-    origin_id = local.s3_origin_id
-    origin_access_control_id = aws_cloudfront_origin_access_control.react_bucket_acesss_control.id
-  }
-   default_cache_behavior {
-    allowed_methods  = ["HEAD","GET",]
-    cached_methods   = ["HEAD","GET",]
-    target_origin_id = local.s3_origin_id
-    #caching optimized policy
-    cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
-    viewer_protocol_policy = "allow-all"
-
-  }
-
-    viewer_certificate {
-    cloudfront_default_certificate = true
-  }
-    restrictions {
-    geo_restriction {
-      restriction_type = "whitelist"
-      locations        = ["GB",]
-    }
-  }
-
-  custom_error_response {
-    error_code = 403
-    response_code = 200
-    response_page_path = "/"
-  }
-}
-
-
- 
-
-data "aws_iam_policy_document" "react_bucket_cloudfront_s3_access_document" {
-  source_policy_documents = [module.s3-static-website.s3jsondocument]
-    statement {
-      effect = "Allow"
-      actions = ["s3:GetObject"]
-      resources = ["${module.s3-static-website.react_bucket_arn}/*"]
-      principals {
-        type = "Service"
-        identifiers = ["cloudfront.amazonaws.com"]
-      }
-      condition {
-        test = "StringEquals"
-        variable = "AWS:SourceArn"
-        values = [aws_cloudfront_distribution.react_website_distribution.arn]
-      }
-    }
-
-}
-
-resource "aws_s3_bucket_policy" "cloudfront_bucket_policy_attachment"{
-  bucket = module.s3-static-website.react_bucket_id
-  policy = data.aws_iam_policy_document.react_bucket_cloudfront_s3_access_document.json
-}
+//if the hoseted zone already exists, dont create it
+// if there is already a certidicate to use, dont create it or add anything to the hosted zone
