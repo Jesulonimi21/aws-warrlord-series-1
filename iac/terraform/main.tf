@@ -96,3 +96,12 @@ output route53-zone-id{
 
 //if the hoseted zone already exists, dont create it
 // if there is already a certidicate to use, dont create it or add anything to the hosted zone
+
+
+//CODEBUILD CREATION TODOS
+//CHOOSE TYPE OF CODEBUILD INTEGRARTION
+//STORE GITHUB CONNECTION IN SECRET MANAGER
+// specify secret manager location
+//Specify primary source webhook event/
+//Specify buildspec path
+//Specify cloudwatch log group for logs (optional)
