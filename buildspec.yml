@@ -19,4 +19,4 @@ phases:
 artifacts:
   base-directory: client/build
   files:
-    - '**/*'
+    - '**/*' 
