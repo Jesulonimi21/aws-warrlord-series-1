@@ -107,3 +107,133 @@ output route53-zone-id{
 //Specify cloudwatch log group for logs (optional)
 //LOOK at the second answer here: https://stackoverflow.com/questions/57066101/how-do-you-specify-github-access-token-with-codebuild-from-cloudformation 
 // make sure it triggers everytime code changes build is created
+//configure a cloudwatch log group for codebuild
+
+
+//lock thuis fo
+data "aws_iam_policy_document" "frontend_production_codebuild_assume_role" {
+  statement {
+    effect = "Allow"
+
+    principals {
+      type        = "Service"
+      identifiers = ["codebuild.amazonaws.com"]
+    }
+
+    actions = ["sts:AssumeRole"]
+  # condition {
+  #   test     = "ArnEquals"
+  #   variable = "aws:arn"
+  #   values   = [aws_codebuild_project.frontend_production_codebuild.arn] # replace with your AWS account ID
+  # }
+  }
+}
+
+resource "aws_iam_role" "frontend_production_codebuild_role" {
+  name               = "frontend_production_codebuild_role"
+  assume_role_policy = data.aws_iam_policy_document.frontend_production_codebuild_assume_role.json
+}
+
+
+data "aws_iam_policy_document" "frontend_production_codebuild_policy_document" {
+    statement {
+    effect  = "Allow"
+    actions = ["s3:*"]
+    resources = [
+      module.s3-static-website.react_bucket_arn,
+      "${module.s3-static-website.react_bucket_arn}/*"
+    ]
+  }
+
+    statement {
+    effect = "Allow"
+
+    actions = [
+      "logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents",
+    ]
+
+    resources = ["*"]
+  }
+
+  statement {
+    effect = "Allow"
+    actions = [
+      "secretsmanager:GetSecretValue",
+      "secretsmanager:DescribeSecret"
+    ]
+    resources = [aws_secretsmanager_secret.codebuild_github_secret.arn]
+  }
+
+}
+resource "aws_iam_role_policy" "example" {
+  role   = aws_iam_role.frontend_production_codebuild_role.name
+  policy = data.aws_iam_policy_document.frontend_production_codebuild_policy_document.json
+}
+
+resource "aws_secretsmanager_secret" "codebuild_github_secret" {
+  name = "codebuild_github_secret"
+}
+
+# The map here can come from other supported configurations
+# like locals, resource attribute, map() built-in, etc.
+variable "github_connection_json" {
+  default = {
+    Token = "..."
+    AuthType = "..."
+    ServerType = "..."
+  }
+
+  type = map(string)
+}
+
+resource "aws_secretsmanager_secret_version" "codebuild_github_secret_version" {
+  secret_id     = aws_secretsmanager_secret.codebuild_github_secret.id
+  secret_string = jsonencode(var.github_connection_json)
+}
+
+
+resource "aws_codebuild_project" "frontend_production_codebuild" {
+  name           = "frontend_production_codebuild"
+  description    = "CodeBuild project for building the frontend application"
+  build_timeout  = 5
+  queued_timeout = 5
+  
+    service_role = aws_iam_role.frontend_production_codebuild_role.arn
+  
+   environment {
+    compute_type                = "BUILD_GENERAL1_SMALL"
+    image                       = "aws/codebuild/amazonlinux-x86_64-standard:5.0"
+    type                        = "LINUX_CONTAINER"
+    image_pull_credentials_type = "CODEBUILD"
+  
+  }
+   source {
+    buildspec = "buildspec.yml"
+    auth {
+      type = "SECRETS_MANAGER"
+      resource = aws_secretsmanager_secret.codebuild_github_secret.arn
+    }
+    type            = "GITHUB"
+    location        = "https://github.com/Jesulonimi21/aws-warrlord-series-1"
+    git_clone_depth = 1
+
+    git_submodules_config {
+      fetch_submodules = true
+    }
+  }
+
+  artifacts {
+    type = "S3"
+    location = module.s3-static-website.react_bucket_id
+  }
+
+# Change log group name
+  logs_config {
+    cloudwatch_logs {
+      group_name  = "codebuild-frontend-production-logs"
+      stream_name = "codebuild-frontend-production-logs-stream"
+    }
+  }
+  }
