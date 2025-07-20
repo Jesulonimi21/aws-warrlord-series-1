@@ -1,0 +1,911 @@
+{
+    "platforms": [
+        {
+            "platform": "AMAZON_LINUX",
+            "languages": [
+                {
+                    "language": "JAVA",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/eb-java-7-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Java 7 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-java-7-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-java-8-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Java 8 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-java-8-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-java-7-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Java 7 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-java-7-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-java-8-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Java 8 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-java-8-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-java-7-amazonlinux-64:2.4.3",
+                            "description": "AWS ElasticBeanstalk - Java 7 Running on Amazon Linux 64bit v2.4.3",
+                            "versions": [
+                                "aws/codebuild/eb-java-7-amazonlinux-64:2.4.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-java-8-amazonlinux-64:2.4.3",
+                            "description": "AWS ElasticBeanstalk - Java 8 Running on Amazon Linux 64bit v2.4.3",
+                            "versions": [
+                                "aws/codebuild/eb-java-8-amazonlinux-64:2.4.3-1.0.0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "language": "RUBY",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Ruby 1.9 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.0 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.1 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.2 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.3 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Ruby 1.9 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.0 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.1 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.2 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.3 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Ruby 1.9 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-1.9-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.0 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.0-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.1 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.1-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.2 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.2-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Ruby 2.3 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-ruby-2.3-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "language": "GOLANG",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/eb-go-1.5-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Go 1.5 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-go-1.5-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-go-1.5-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Go 1.5 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-go-1.5-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-go-1.6-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Go 1.6 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-go-1.6-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "language": "NODE_JS",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/eb-nodejs-4.4.6-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Node.js 4.4.6 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-nodejs-4.4.6-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-nodejs-6.10.0-amazonlinux-64:4.0.0",
+                            "description": "AWS ElasticBeanstalk - Node.js 6.10.0 Running on Amazon Linux 64bit v4.0.0",
+                            "versions": [
+                                "aws/codebuild/eb-nodejs-6.10.0-amazonlinux-64:4.0.0-1.0.0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "language": "PYTHON",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/eb-python-2.6-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Python 2.6 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.6-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-2.7-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Python 2.7 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.7-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-3.4-amazonlinux-64:2.1.3",
+                            "description": "AWS ElasticBeanstalk - Python 3.4 Running on Amazon Linux 64bit v2.1.3",
+                            "versions": [
+                                "aws/codebuild/eb-python-3.4-amazonlinux-64:2.1.3-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-2.6-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Python 2.6 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.6-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-2.7-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Python 2.7 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.7-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-3.4-amazonlinux-64:2.1.6",
+                            "description": "AWS ElasticBeanstalk - Python 3.4 Running on Amazon Linux 64bit v2.1.6",
+                            "versions": [
+                                "aws/codebuild/eb-python-3.4-amazonlinux-64:2.1.6-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-2.6-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Python 2.6 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.6-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-2.7-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Python 2.7 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-python-2.7-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/eb-python-3.4-amazonlinux-64:2.3.2",
+                            "description": "AWS ElasticBeanstalk - Python 3.4 Running on Amazon Linux 64bit v2.3.2",
+                            "versions": [
+                                "aws/codebuild/eb-python-3.4-amazonlinux-64:2.3.2-1.0.0"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "AMAZON_LINUX_2",
+            "languages": [
+                {
+                    "language": "JAVA",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:corretto11",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 11 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:corretto17",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 17 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:corretto21",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 21 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:corretto11",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 11 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:corretto17",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 17 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:corretto21",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Java 21 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "DOTNET",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:dotnet6",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda .NET 6 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:dotnet6",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda .NET 6 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:dotnet8",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda .NET 8 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:dotnet8",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda .NET 8 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "GOLANG",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:go1.21",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Go 1.21 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:go1.21",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Go 1.21 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:go1.24",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Go 1.24 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:go1.24",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Go 1.24 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "NODE_JS",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:nodejs18",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 18 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:nodejs20",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 20 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs18",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 18 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs20",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 20 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:nodejs22",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 22 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda NodeJS 22 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "PYTHON",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:python3.11",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.11 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:python3.12",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.12 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:python3.11",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.11 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:python3.12",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.12 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:python3.13",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.13 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:python3.13",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Python 3.13 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "RUBY",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:ruby3.2",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Ruby 3.2 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:ruby3.2",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Ruby 3.2 Curated Image (aarch64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-lambda-standard:ruby3.4",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Ruby 3.4 Curated Image (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-lambda-standard:ruby3.4",
+                            "description": "AWS CodeBuild - Docker image based on the AWS Lambda Ruby 3.4 Curated Image (aarch64)",
+                            "versions": []
+                        }
+                    ]
+                },
+                {
+                    "language": "STANDARD",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/amazonlinux2-x86_64-standard:4.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (x86_64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-22.06.30",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-22.10.27",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.02.16",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.04.13",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.05.22",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.06.12",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.07.28",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-23.12.14",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.01.13",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.02.08",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.02.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.03.20",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.04.10",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.05.15",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.08.23",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.10.02",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-24.10.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-25.01.30",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-25.04.04",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:4.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-standard:4.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (x86_64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-22.06.30",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-22.10.27",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.02.16",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.04.13",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.05.22",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.06.12",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.07.28",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-23.12.14",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.01.13",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.02.08",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.02.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.03.20",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.04.10",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.05.15",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.08.23",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.10.02",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-24.10.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-25.01.30",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-25.04.04",
+                                "aws/codebuild/amazonlinux-x86_64-standard:4.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux2-x86_64-standard:5.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (x86_64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-23.05.22",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-23.06.12",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-23.07.28",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-23.12.14",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.01.13",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.02.08",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.02.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.03.20",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.04.10",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.05.15",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.08.23",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.10.02",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-24.10.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-25.01.30",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-25.04.04",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:5.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-standard:5.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (x86_64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-23.05.22",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-23.06.12",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-23.07.28",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-23.12.14",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.01.13",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.02.08",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.02.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.03.20",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.04.10",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.05.15",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.08.23",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.10.02",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-24.10.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-25.01.30",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-25.04.04",
+                                "aws/codebuild/amazonlinux-x86_64-standard:5.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux2-x86_64-standard:corretto8",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (x86_64) with support for corretto8",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-23.04.25",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-23.05.22",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-23.06.12",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-23.07.28",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-23.12.14",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.01.13",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.02.08",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.02.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.03.20",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.04.10",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.05.15",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.08.23",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.10.02",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-24.10.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-25.01.30",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-25.04.04",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto8-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-standard:corretto8",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (x86_64) with support for corretto8",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-23.04.25",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-23.05.22",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-23.06.12",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-23.07.28",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-23.12.14",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.01.13",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.02.08",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.02.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.03.20",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.04.10",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.05.15",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.08.23",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.10.02",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-24.10.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-25.01.30",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-25.04.04",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto8-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux2-x86_64-standard:corretto11",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (x86_64) with support for corretto11",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-23.04.25",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-23.05.22",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-23.06.12",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-23.07.28",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-23.12.14",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.01.13",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.02.08",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.02.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.03.20",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.04.10",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.05.15",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.08.23",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.10.02",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-24.10.29",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-25.01.30",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-25.04.04",
+                                "aws/codebuild/amazonlinux2-x86_64-standard:corretto11-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-x86_64-standard:corretto11",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (x86_64) with support for corretto11",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-23.04.25",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-23.05.22",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-23.06.12",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-23.07.28",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-23.12.14",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.01.13",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.02.08",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.02.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.03.20",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.04.10",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.05.15",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.08.23",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.10.02",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-24.10.29",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-25.01.30",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-25.04.04",
+                                "aws/codebuild/amazonlinux-x86_64-standard:corretto11-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux2-aarch64-standard:2.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (aarch64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-20.06.15",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-20.08.13",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-21.01.12",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-21.03.02",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-21.08.20",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-21.10.15",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.01.29",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.03.06",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.03.21",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.06.07",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.10.02",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-24.10.29",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:2.0-25.03.03"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-standard:2.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2 (aarch64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-20.06.15",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-20.08.13",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-21.01.12",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-21.03.02",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-21.08.20",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-21.10.15",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.01.29",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.03.06",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.03.21",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.06.07",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.10.02",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-24.10.29",
+                                "aws/codebuild/amazonlinux-aarch64-standard:2.0-25.03.03"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux2-aarch64-standard:3.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (aarch64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-23.04.25",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.01.29",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.03.06",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.03.21",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.06.07",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.10.02",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-24.10.29",
+                                "aws/codebuild/amazonlinux2-aarch64-standard:3.0-25.03.03"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/amazonlinux-aarch64-standard:3.0",
+                            "description": "AWS CodeBuild - Docker image based on Amazon Linux 2023 (aarch64) with multiple language support",
+                            "versions": [
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-23.04.25",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.01.29",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.03.06",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.03.21",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.06.07",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.10.02",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-24.10.29",
+                                "aws/codebuild/amazonlinux-aarch64-standard:3.0-25.03.03"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "AMAZON_LINUX_2023_AMI",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/ami/amazonlinux-x86_64-base:2023-1.0",
+                            "description": "AWS CodeBuild Reserved Capacity AMI based on Amazon Linux 2023 AMI built by Amazon Web Services (x86_64)",
+                            "versions": [
+                                "aws/codebuild/ami/amazonlinux-x86_64-base:2023-1.0-11.15.24"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/ami/amazonlinux-arm-base:2023-1.0",
+                            "description": "AWS CodeBuild Reserved Capacity AMI based on Amazon Linux 2023 AMI built by Amazon Web Services (arm64)",
+                            "versions": [
+                                "aws/codebuild/ami/amazonlinux-arm-base:2023-1.0-11.15.24"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "AMAZON_LINUX_AMI",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/ami/amazonlinux-x86_64-base:latest",
+                            "description": "AWS CodeBuild On-Demand AMI based on Amazon Linux AMI built by Amazon Web Services (x86_64)",
+                            "versions": []
+                        },
+                        {
+                            "name": "aws/codebuild/ami/amazonlinux-arm-base:latest",
+                            "description": "AWS CodeBuild On-Demand AMI based on Amazon Linux AMI built by Amazon Web Services (arm64)",
+                            "versions": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "MAC",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/macos-arm-base:14",
+                            "description": "AWS CodeBuild - AMI based on macOS Sonoma 14 AMI built by Amazon Web Services (arm64_mac)",
+                            "versions": [
+                                "aws/codebuild/macos-arm-base:14-14.5_06.13.24",
+                                "aws/codebuild/macos-arm-base:14-14.7.2_02.27.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/macos-arm-base:15",
+                            "description": "AWS CodeBuild - AMI based on macOS Sequoia 15 AMI built by Amazon Web Services (arm64_mac)",
+                            "versions": [
+                                "aws/codebuild/macos-arm-base:15-15.2_02.27.25"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "UBUNTU",
+            "languages": [
+                {
+                    "language": "STANDARD",
+                    "images": [
+                        {
+                            "name": "aws/codebuild/standard:5.0",
+                            "description": "AWS CodeBuild - Docker image based on Ubuntu 20 with multiple language support",
+                            "versions": [
+                                "aws/codebuild/standard:5.0-21.01.08",
+                                "aws/codebuild/standard:5.0-21.03.09",
+                                "aws/codebuild/standard:5.0-21.04.23",
+                                "aws/codebuild/standard:5.0-21.08.20",
+                                "aws/codebuild/standard:5.0-21.10.15",
+                                "aws/codebuild/standard:5.0-22.03.15",
+                                "aws/codebuild/standard:5.0-22.06.09",
+                                "aws/codebuild/standard:5.0-22.06.30",
+                                "aws/codebuild/standard:5.0-22.10.27",
+                                "aws/codebuild/standard:5.0-23.02.16",
+                                "aws/codebuild/standard:5.0-23.04.13",
+                                "aws/codebuild/standard:5.0-23.05.22",
+                                "aws/codebuild/standard:5.0-23.06.12",
+                                "aws/codebuild/standard:5.0-23.07.28",
+                                "aws/codebuild/standard:5.0-23.12.14",
+                                "aws/codebuild/standard:5.0-24.01.13",
+                                "aws/codebuild/standard:5.0-24.02.08",
+                                "aws/codebuild/standard:5.0-24.02.29",
+                                "aws/codebuild/standard:5.0-24.03.20",
+                                "aws/codebuild/standard:5.0-24.04.10",
+                                "aws/codebuild/standard:5.0-24.05.15",
+                                "aws/codebuild/standard:5.0-24.08.23",
+                                "aws/codebuild/standard:5.0-24.10.02",
+                                "aws/codebuild/standard:5.0-24.10.29",
+                                "aws/codebuild/standard:5.0-25.01.30",
+                                "aws/codebuild/standard:5.0-25.04.04",
+                                "aws/codebuild/standard:5.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/standard:6.0",
+                            "description": "AWS CodeBuild - Docker image based on Ubuntu 22 with multiple language support",
+                            "versions": [
+                                "aws/codebuild/standard:6.0-22.06.30",
+                                "aws/codebuild/standard:6.0-22.10.27",
+                                "aws/codebuild/standard:6.0-23.02.16",
+                                "aws/codebuild/standard:6.0-23.04.13",
+                                "aws/codebuild/standard:6.0-23.05.22",
+                                "aws/codebuild/standard:6.0-23.06.12",
+                                "aws/codebuild/standard:6.0-23.07.28",
+                                "aws/codebuild/standard:6.0-23.12.14",
+                                "aws/codebuild/standard:6.0-24.01.13",
+                                "aws/codebuild/standard:6.0-24.02.08",
+                                "aws/codebuild/standard:6.0-24.02.29",
+                                "aws/codebuild/standard:6.0-24.03.20",
+                                "aws/codebuild/standard:6.0-24.04.10",
+                                "aws/codebuild/standard:6.0-24.05.15",
+                                "aws/codebuild/standard:6.0-24.08.23",
+                                "aws/codebuild/standard:6.0-24.10.02",
+                                "aws/codebuild/standard:6.0-24.10.29",
+                                "aws/codebuild/standard:6.0-25.01.30",
+                                "aws/codebuild/standard:6.0-25.04.04",
+                                "aws/codebuild/standard:6.0-25.06.25"
+                            ]
+                        },
+                        {
+                            "name": "aws/codebuild/standard:7.0",
+                            "description": "AWS CodeBuild - Docker image based on Ubuntu 22 with multiple language support",
+                            "versions": [
+                                "aws/codebuild/standard:7.0-23.04.13",
+                                "aws/codebuild/standard:7.0-23.05.22",
+                                "aws/codebuild/standard:7.0-23.06.12",
+                                "aws/codebuild/standard:7.0-23.07.28",
+                                "aws/codebuild/standard:7.0-23.12.14",
+                                "aws/codebuild/standard:7.0-24.01.13",
+                                "aws/codebuild/standard:7.0-24.02.08",
+                                "aws/codebuild/standard:7.0-24.02.29",
+                                "aws/codebuild/standard:7.0-24.03.20",
+                                "aws/codebuild/standard:7.0-24.04.10",
+                                "aws/codebuild/standard:7.0-24.05.15",
+                                "aws/codebuild/standard:7.0-24.08.23",
+                                "aws/codebuild/standard:7.0-24.10.02",
+                                "aws/codebuild/standard:7.0-24.10.29",
+                                "aws/codebuild/standard:7.0-25.01.30",
+                                "aws/codebuild/standard:7.0-25.04.04",
+                                "aws/codebuild/standard:7.0-25.06.25"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "platform": "WINDOWS_SERVER_2019",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "platform": "WINDOWS_SERVER_2022",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "platform": "WINDOWS_SERVER_2022_AMI",
+            "languages": [
+                {
+                    "language": "BASE",
+                    "images": []
+                }
+            ]
+        }
+    ]
+}

@@ -15,7 +15,7 @@ export default function Home(){
        
            <button className="bg-blue-500 h-8 w-24 mt-8 rounded-md ml-8 text-white" onClick={()=>{
             navigate("/second")
-           }}>Next Page
+           }}>Next Page from codebuild
                </button>
       </div> )
 }
