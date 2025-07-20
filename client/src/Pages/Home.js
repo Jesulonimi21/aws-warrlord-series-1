@@ -13,7 +13,7 @@ export default function Home(){
 
     return (<div className="">
        
-           <button className="bg-blue-500 h-8 w-24 mt-8 rounded-md ml-8 text-white" onClick={()=>{
+           <button className="bg-blue-500 h-8 w-64 mt-8 rounded-md ml-8 text-white" onClick={()=>{
             navigate("/second")
            }}>Next Page from codebuild
                </button>

@@ -173,7 +173,7 @@ resource "aws_iam_role_policy" "example" {
 }
 
 resource "aws_secretsmanager_secret" "codebuild_github_secret" {
-  name = "codebuild_github_secret"
+  name = "codebuild_github_secret_09"
 }
 
 # The map here can come from other supported configurations
@@ -227,6 +227,11 @@ resource "aws_codebuild_project" "frontend_production_codebuild" {
   artifacts {
     type = "S3"
     location = module.s3-static-website.react_bucket_id
+    namespace_type = "NONE"
+    packaging       = "NONE"         
+    path            = ""        
+    name            = "." 
+     encryption_disabled = true         
   }
 
 # Change log group name
