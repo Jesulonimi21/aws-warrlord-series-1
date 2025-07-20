@@ -167,13 +167,13 @@ data "aws_iam_policy_document" "frontend_production_codebuild_policy_document" {
   }
 
 }
-resource "aws_iam_role_policy" "example" {
+resource "aws_iam_role_policy" "codebuild_policy" {
   role   = aws_iam_role.frontend_production_codebuild_role.name
   policy = data.aws_iam_policy_document.frontend_production_codebuild_policy_document.json
 }
 
 resource "aws_secretsmanager_secret" "codebuild_github_secret" {
-  name = "codebuild_github_secret_09"
+  name_prefix = "codebuild_github_secret_10"
 }
 
 # The map here can come from other supported configurations
@@ -192,9 +192,22 @@ resource "aws_secretsmanager_secret_version" "codebuild_github_secret_version" {
   secret_id     = aws_secretsmanager_secret.codebuild_github_secret.id
   secret_string = jsonencode(var.github_connection_json)
 }
+resource "time_sleep" "wait_for_iam_propagation" {
+
+  create_duration = "45s"
+
+
+  depends_on = [ aws_iam_role_policy.codebuild_policy]
+}
+
 
 
 resource "aws_codebuild_project" "frontend_production_codebuild" {
+
+
+  depends_on = [
+    aws_iam_role_policy.codebuild_policy
+  ]
   name           = "frontend_production_codebuild"
   description    = "CodeBuild project for building the frontend application"
   build_timeout  = 5
@@ -252,4 +265,6 @@ resource "aws_codebuild_project" "frontend_production_codebuild" {
       pattern = "PUSH"
     }
   }
+
+ depends_on = [time_sleep.wait_for_iam_propagation]
 }
